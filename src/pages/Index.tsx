@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cloud, ServerCog, ShieldCheck, Rocket, TrendingUp, Clock,  Mail, MessageCircle } from "lucide-react";
+import { Cloud, ServerCog, ShieldCheck, Rocket, TrendingUp, Clock,  Mail, MessageCircle, Calendar } from "lucide-react";
 
 const services = [
   {
@@ -149,9 +149,11 @@ const Index = () => {
                 Pronto para transformar sua infraestrutura e acelerar seu crescimento? Entre em contato e vamos conversar sobre seu próximo projeto.
               </p>
             </div>
+;
+
 <div className="mx-auto w-full max-w-sm space-y-2">
   <div className="flex flex-col gap-2 sm:flex-row">
-    <Button size="lg" asChild className="w-full flex items-center gap-2">
+    <Button size="lg" variant="outline" asChild className="w-full flex items-center gap-2">
       <a
         href="https://mail.google.com/mail/?view=cm&fs=1&to=contato@yros.cloud&su=Contato%20via%20site&body=Olá,%20gostaria%20de%20falar%20com%20vocês"
         target="_blank"
@@ -172,8 +174,26 @@ const Index = () => {
       </a>
     </Button>
   </div>
-</div>
 
+  {/* Botão azul com pulse e badge */}
+  <div className="relative">
+    <Button
+      size="lg"
+      variant="default"
+      asChild
+      className="w-full flex items-center gap-2 animate-pulse"
+    >
+      <a
+        href="https://calendly.com/yros/kickoff"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Calendar className="h-5 w-5" />
+        Agendar Reunião de Kickoff
+      </a>
+    </Button>
+  </div>
+</div>
 
           </div>
         </section>
