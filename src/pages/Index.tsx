@@ -67,7 +67,7 @@ const Index = () => {
               <img
                 alt="Serviços de Cloud TI"
                 className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last animate-scale-in"
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2070&auto=format&fit=crop"
               />
             </div>
           </div>
