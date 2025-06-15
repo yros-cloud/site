@@ -65,9 +65,9 @@ const Index = () => {
                 </div>
               </div>
               <img
-                alt="Cloud"
+                alt="Serviços de Cloud TI"
                 className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last animate-scale-in"
-                src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2070&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1487000000000-df37b8c1edcb?q=80&w=2070&auto=format&fit=crop"
               />
             </div>
           </div>
