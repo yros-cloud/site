@@ -1,12 +1,159 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Cloud, ServerCog, ShieldCheck, Rocket, TrendingUp, Clock } from "lucide-react";
+
+const services = [
+  {
+    icon: <Cloud className="h-10 w-10 text-primary" />,
+    title: "Consultoria em Cloud",
+    description: "Otimize sua infraestrutura, reduza custos e aumente a escalabilidade com nossos especialistas em nuvem.",
+  },
+  {
+    icon: <ServerCog className="h-10 w-10 text-primary" />,
+    title: "DevOps & SRE",
+    description: "Automatize seus pipelines, melhore a confiabilidade e acelere o tempo de entrega de software.",
+  },
+  {
+    icon: <ShieldCheck className="h-10 w-10 text-primary" />,
+    title: "Plataforma & FinOps",
+    description: "Construa plataformas internas robustas e tenha total controle sobre seus gastos na nuvem.",
+  },
+  {
+    icon: <Clock className="h-10 w-10 text-primary" />,
+    title: "Plantão 24x7",
+    description: "Suporte especializado e proativo para garantir que seus sistemas estejam sempre operacionais.",
+  },
+  {
+    icon: <Rocket className="h-10 w-10 text-primary" />,
+    title: "Projetos de Inovação",
+    description: "Transforme suas ideias em realidade com nossa equipe de desenvolvimento e gestão de projetos.",
+  },
+  {
+    icon: <TrendingUp className="h-10 w-10 text-primary" />,
+    title: "Produtos B2B & B2C",
+    description: "Em breve, soluções inovadoras para otimizar processos e impulsionar o crescimento do seu negócio.",
+  },
+];
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="flex flex-col min-h-dvh bg-background text-foreground font-sans">
+      <Header />
+      <main className="flex-1">
+        <section className="w-full py-20 md:py-32 lg:py-40 xl:py-48">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+              <div className="flex flex-col justify-center space-y-4 text-center lg:text-left">
+                <div className="space-y-4">
+                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                    Potencialize seu Negócio com Tecnologia de Ponta
+                  </h1>
+                  <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
+                    A YROS oferece consultoria especializada em Cloud, DevOps e SRE para levar sua empresa ao próximo nível.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center lg:justify-start">
+                  <Button size="lg" asChild>
+                    <a href="#contact">Fale com um Especialista</a>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild>
+                    <a href="#services">Nossos Serviços</a>
+                  </Button>
+                </div>
+              </div>
+              <img
+                alt="Hero"
+                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last animate-scale-in"
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2070&auto=format&fit=crop"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm">Nossos Serviços</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Soluções Completas para sua Empresa</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Oferecemos um portfólio completo de serviços para garantir a eficiência, segurança e inovação da sua infraestrutura.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
+              {services.map((service, index) => (
+                <Card key={service.title} className="bg-background/50 hover:bg-background/80 transition-all duration-300 hover:scale-105 animate-scale-in" style={{ animationDelay: `${index * 100}ms`}}>
+                  <CardHeader className="flex flex-row items-center gap-4 p-4">
+                    {service.icon}
+                    <CardTitle>{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-4 pt-0">
+                    <p className="text-sm text-muted-foreground">{service.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+            <div className="space-y-4">
+              <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Sobre Nós</div>
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Seu Parceiro Estratégico em Tecnologia</h2>
+              <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Nossa missão é garantir que sua empresa utilize as melhores ferramentas e práticas para alcançar o sucesso, com uma equipe sênior e suporte proativo.
+              </p>
+            </div>
+            <div className="flex flex-col gap-6">
+                <div className="flex items-start gap-4">
+                    <ShieldCheck className="h-8 w-8 mt-1 flex-shrink-0 text-primary"/>
+                    <div>
+                        <h3 className="text-lg font-bold">Expertise Comprovada</h3>
+                        <p className="text-muted-foreground">Equipe sênior com vasta experiência em projetos de alta complexidade em diversas indústrias.</p>
+                    </div>
+                </div>
+                 <div className="flex items-start gap-4">
+                    <Clock className="h-8 w-8 mt-1 flex-shrink-0 text-primary"/>
+                    <div>
+                        <h3 className="text-lg font-bold">Suporte Proativo 24x7</h3>
+                        <p className="text-muted-foreground">Monitoramento e suporte contínuo para garantir a máxima disponibilidade e performance.</p>
+                    </div>
+                </div>
+                 <div className="flex items-start gap-4">
+                    <Rocket className="h-8 w-8 mt-1 flex-shrink-0 text-primary"/>
+                    <div>
+                        <h3 className="text-lg font-bold">Foco em Inovação e Resultados</h3>
+                        <p className="text-muted-foreground">Buscamos constantemente as melhores soluções para otimizar custos e impulsionar seus objetivos.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 border-t">
+          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+            <div className="space-y-3">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Vamos construir o futuro juntos.</h2>
+              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Pronto para transformar sua infraestrutura e acelerar seu crescimento? Entre em contato e vamos conversar sobre seu próximo projeto.
+              </p>
+            </div>
+            <div className="mx-auto w-full max-w-sm space-y-2">
+              <Button size="lg" asChild className="w-full">
+                <a href="mailto:contato@yros.cloud">
+                  Entre em Contato por E-mail
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 };
