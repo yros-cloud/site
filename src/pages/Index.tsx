@@ -48,7 +48,7 @@ const Index = () => {
             <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4 text-center lg:text-left">
                 <div className="space-y-4">
-                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-500">
                     Potencialize seu Negócio com Tecnologia de Ponta
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
@@ -73,7 +73,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-secondary" style={{ backgroundImage: "url('/lovable-uploads/8df24f00-d426-45be-b089-956d0edc2646.png')"}}>
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -86,7 +86,7 @@ const Index = () => {
             </div>
             <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
               {services.map((service, index) => (
-                <Card key={service.title} className="bg-background/50 hover:bg-background/80 transition-all duration-300 hover:scale-105 animate-scale-in" style={{ animationDelay: `${index * 100}ms`}}>
+                <Card key={service.title} className="bg-background/80 hover:bg-background/95 transition-all duration-300 hover:scale-105 animate-scale-in" style={{ animationDelay: `${index * 100}ms`}}>
                   <CardHeader className="flex flex-row items-center gap-4 p-4">
                     {service.icon}
                     <CardTitle>{service.title}</CardTitle>
@@ -159,3 +159,4 @@ const Index = () => {
 };
 
 export default Index;
+
