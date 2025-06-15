@@ -2,40 +2,47 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cloud, ServerCog, ShieldCheck, Rocket, TrendingUp, Clock } from "lucide-react";
+import { Cloud, ServerCog, ShieldCheck, Rocket, TrendingUp, Clock,  Mail, MessageCircle } from "lucide-react";
 
 const services = [
   {
     icon: <Cloud className="h-10 w-10 text-primary" />,
     title: "Consultoria em Cloud",
     description: "Otimize sua infraestrutura, reduza custos e aumente a escalabilidade com nossos especialistas em nuvem.",
+    href: "/services/cloud",
   },
   {
     icon: <ServerCog className="h-10 w-10 text-primary" />,
     title: "DevOps & SRE",
     description: "Automatize seus pipelines, melhore a confiabilidade e acelere o tempo de entrega de software.",
+    href: "/services/devops-sre",
   },
   {
     icon: <ShieldCheck className="h-10 w-10 text-primary" />,
     title: "Plataforma & FinOps",
     description: "Construa plataformas internas robustas e tenha total controle sobre seus gastos na nuvem.",
+    href: "/services/finops",
   },
   {
     icon: <Clock className="h-10 w-10 text-primary" />,
     title: "Plantão 24x7",
     description: "Suporte especializado e proativo para garantir que seus sistemas estejam sempre operacionais.",
+    href: "/services/plantao",
   },
   {
     icon: <Rocket className="h-10 w-10 text-primary" />,
     title: "Projetos de Inovação",
     description: "Transforme suas ideias em realidade com nossa equipe de desenvolvimento e gestão de projetos.",
+    href: "/services/inovacao",
   },
   {
     icon: <TrendingUp className="h-10 w-10 text-primary" />,
     title: "Produtos B2B & B2C",
     description: "Em breve, soluções inovadoras para otimizar processos e impulsionar o crescimento do seu negócio.",
+    href: "/services/produtos",
   },
 ];
+
 
 const Index = () => {
   return (
@@ -142,13 +149,32 @@ const Index = () => {
                 Pronto para transformar sua infraestrutura e acelerar seu crescimento? Entre em contato e vamos conversar sobre seu próximo projeto.
               </p>
             </div>
-            <div className="mx-auto w-full max-w-sm space-y-2">
-              <Button size="lg" asChild className="w-full">
-                <a href="mailto:contato@yros.cloud">
-                  Entre em Contato por E-mail
-                </a>
-              </Button>
-            </div>
+<div className="mx-auto w-full max-w-sm space-y-2">
+  <div className="flex flex-col gap-2 sm:flex-row">
+    <Button size="lg" asChild className="w-full flex items-center gap-2">
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=contato@yros.cloud&su=Contato%20via%20site&body=Olá,%20gostaria%20de%20falar%20com%20vocês"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Mail className="h-5 w-5" />
+        Enviar E-mail
+      </a>
+    </Button>
+    <Button size="lg" variant="outline" asChild className="w-full flex items-center gap-2">
+      <a
+        href="https://wa.me/5548999999999?text=Olá,%20gostaria%20de%20falar%20com%20a%20YROS%20CLOUD%20sobre%20consultoria."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <MessageCircle className="h-5 w-5" />
+        Falar no WhatsApp
+      </a>
+    </Button>
+  </div>
+</div>
+
+
           </div>
         </section>
       </main>
