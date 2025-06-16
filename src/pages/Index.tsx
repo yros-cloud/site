@@ -165,7 +165,7 @@ const Index = () => {
     </Button>
     <Button size="lg" variant="outline" asChild className="w-full flex items-center gap-2">
       <a
-        href="https://wa.me/5548999999999?text=Olá,%20gostaria%20de%20falar%20com%20a%20YROS%20CLOUD%20sobre%20consultoria."
+        href="https://wa.me/5548988501975?text=Olá,%20gostaria%20de%20falar%20com%20a%20YROS%20CLOUD%20sobre%20consultoria."
         target="_blank"
         rel="noopener noreferrer"
       >
