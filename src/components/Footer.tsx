@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="flex items-center gap-2">
         <img src="/lovable-uploads/f056ca2f-ca0c-43d0-b947-e623a1ea6fff.png" alt="YROS Icon" className="h-5" />
         <p className="text-xs text-muted-foreground">
-          © {currentYear} YROS Consultoria. Todos os direitos reservados.
+          © {currentYear} YROS Consultoria - CNPJ: 12.857.732/0001-81 - Todos os direitos reservados.
         </p>
       </div>
       <nav className="sm:ml-auto flex gap-4 sm:gap-6">
